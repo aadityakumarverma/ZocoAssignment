@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvActionBar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/zoco_orange"
+        >
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:src="@drawable/zoconut_icon"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+
+        android:id="@+id/tvRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="@dimen/_18sdp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_70sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvActionBar"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clEmailId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:paddingBottom="@dimen/_1sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegister">
+
+
+        <TextView
+            android:id="@+id/tvEmailId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:background="@drawable/text_view_background"
+            android:elevation=".1dp"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:text="@string/email_id"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextSizeCheck" />
+
+        <EditText
+            android:id="@+id/etEmailId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_background"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/hint_email_id"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            android:maxLength="40"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingBottom="@dimen/_7sdp"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/validateEmailId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="#ff0000"
+        android:text="@string/please_enter_valid_email"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        app:layout_constraintTop_toBottomOf="@+id/clEmailId"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_1sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clEmailId">
+
+
+        <TextView
+
+            android:id="@+id/tvPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:background="@drawable/text_view_background"
+            android:elevation=".1dp"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:text="@string/password"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextSizeCheck" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_background"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/enter_your_password"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLength="40"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingBottom="@dimen/_7sdp"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/validatePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="#ff0000"
+        android:text="@string/please_enter_valid_password"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        app:layout_constraintTop_toBottomOf="@+id/clPassword"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_1sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clPassword">
+
+
+        <TextView
+
+            android:id="@+id/tvConfirmPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:background="@drawable/text_view_background"
+            android:elevation=".1dp"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:text="@string/confirm_password"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextSizeCheck" />
+
+        <EditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_background"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/confirm_your_password"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLength="40"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingBottom="@dimen/_7sdp"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/validateConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="#ff0000"
+        android:text="@string/please_enter_valid_password"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        app:layout_constraintTop_toBottomOf="@+id/clPassword"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:text="@string/signup"
+        android:background="@drawable/button_bg"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="@dimen/_10sdp"
+        android:elevation="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clConfirmPassword"
+        />
+    <TextView
+        android:id="@+id/tvAlreadyRegistered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_10sdp"
+        android:text="@string/already_registered_login"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
